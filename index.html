@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Petshop - Teste Prático</title>
+</head>
+<body>
+  <!-- Card 0: Cadastro de Cliente -->
+  <div class="card">
+    <h2>Cadastro de Cliente</h2>
+    <input type="text" id="clienteNome" placeholder="Nome do Cliente">
+    <input type="email" id="clienteEmail" placeholder="Email do Cliente">
+    <label>
+      <input type="checkbox" id="clienteVip"> Cliente VIP
+    </label>
+    <button onclick="criarCliente()">Cadastrar Cliente</button>
+    <ul id="listaClientes"></ul>
+  </div>
+
+  <!-- Card 1: Cadastro de Pet -->
+  <div class="card">
+    <h2>Cadastro de Pet</h2>
+    <input type="text" id="petNome" placeholder="Nome do Pet">
+    <input type="text" id="petTipo" placeholder="Tipo do Pet">
+    <input type="number" id="petIdade" placeholder="Idade do Pet">
+    <button onclick="cadastrarPet()">Cadastrar Pet</button>
+    <ul id="listaPets"></ul>
+  </div>
+
+  <!-- Card 2: Cadastro de Produto -->
+  <div class="card">
+    <h2>Cadastro de Produto</h2>
+    <input type="text" id="produtoNome" placeholder="Nome do Produto">
+    <input type="number" id="produtoPreco" placeholder="Preço do Produto">
+    <button onclick="criarProduto()">Cadastrar Produto</button>
+    <ul id="listaProdutos"></ul>
+  </div>
+
+  <!-- Card 3: Carrinho de Compras -->
+  <div class="card">
+    <h2>Carrinho de Compras</h2>
+    <select id="produtoSelect"></select>
+    <button onclick="adicionarCarrinho()">Adicionar ao Carrinho</button>
+    <button onclick="removerCarrinho()">Remover do Carrinho</button>
+    <button onclick="finalizarCompra()">Finalizar Compra</button>
+    <ul id="listaCarrinho"></ul>
+    <p>Total: R$ <span id="total">0</span></p>
+  </div>
+
+  <!-- Carrossel -->
+  <div class="carrossel">
+    <div class="slides">
+      <div class="slide">Slide 1</div>
+      <div class="slide">Slide 2</div>
+      <div class="slide">Slide 3</div>
+    </div>
+    <button onclick="prevSlide()">Anterior</button>
+    <button onclick="nextSlide()">Próximo</button>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
